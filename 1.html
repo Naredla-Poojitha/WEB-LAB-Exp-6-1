@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Date and Factorial</title>
+
+<script>
+function displayDate()
+{
+    var d = new Date();
+    var day = d.getDate();
+    var month = d.getMonth() + 1;
+    var year = d.getFullYear();
+
+    document.getElementById("datebox").value =
+    day + "/" + month + "/" + year;
+}
+
+function calculateFactorial()
+{
+    var n = prompt("Enter a number to calculate its factorial:");
+    var fact = 1;
+
+    for(var i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+
+    alert("The factorial of " + n + " is " + fact);
+}
+</script>
+
+</head>
+
+<body>
+
+<input type="button" value="Display Date" onclick="displayDate()">
+<input type="text" id="datebox">
+<input type="button" value="Calculate Factorial" onclick="calculateFactorial()">
+
+</body>
+</html>
